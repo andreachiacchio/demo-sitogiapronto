@@ -21,10 +21,11 @@ p.innerHTML='<div class="ch"><b>'+h(D.nome)+'</b><span>Assistente</span><button 
 b.setAttribute('aria-controls','chat-panel');d.body.appendChild(p);d.body.appendChild(b);
 var L=p.querySelector('.cl'),F=p.querySelector('form'),IN=p.querySelector('input');
 function add(who,html,qr){var m=d.createElement('div');m.className='cm '+who;m.innerHTML=html;L.appendChild(m);
- if(qr&&qr.length){var q=d.createElement('div');q.className='cq';qr.forEach(function(t){var x=d.createElement('button');x.type='button';x.textContent=t;x.onclick=function(){send(t)};q.appendChild(x)});L.appendChild(q)}
+ if(qr&&qr.length){var q=d.createElement('div');q.className='cq';qr.forEach(function(t){var x=d.createElement('button');x.type='button';x.textContent=t;x.onclick=function(){T('risposta-rapida-'+norm(t).trim().replace(/ +/g,'-').slice(0,20));send(t)};q.appendChild(x)});L.appendChild(q)}
  L.scrollTop=L.scrollHeight}
 var QR=['Orari','Dove siamo',RIST?'Menu':'Servizi','Prenota'];
-function open(){p.hidden=false;b.setAttribute('aria-expanded','true');d.body.classList.add('chat-on');
+function T(n){window.sgpTrack&&window.sgpTrack(n)}
+function open(){T('chat-aperta');p.hidden=false;b.setAttribute('aria-expanded','true');d.body.classList.add('chat-on');
  if(!L.children.length)add('bot','Ciao! Sono l’assistente di '+h(D.nome)+'. Chiedimi orari, indirizzo, '+(RIST?'menu':'servizi')+' o prenota.',QR);setTimeout(function(){IN.focus()},30)}
 function close(){p.hidden=true;b.setAttribute('aria-expanded','false');d.body.classList.remove('chat-on');b.focus()}
 b.onclick=function(){p.hidden?open():close()};p.querySelector('.cx').onclick=close;
@@ -62,7 +63,7 @@ function wa(){var chi=RIST?(bk.chi+(/^\d+$/.test(bk.chi)?(bk.chi=='1'?' persona'
 function flow(v){bk[STEPS[st][0]]=v;st++;if(st<STEPS.length)return [STEPS[st][1],STEPS[st][2]];st=null;return wa()}
 function rules(q){var t=norm(q);
  if(st!==null){if(/^(annulla|stop|basta)/.test(t)){st=null;return ['Ok, prenotazione annullata.',QR]}return flow(q.trim().slice(0,60))}
- if(has(t,['prenot','tavolo','appuntament','posto','riserv'])){if(!D.wa_prenota)return [call('Per prenotare chiamaci'),null];st=0;bk={};return [STEPS[0][1]+' <small>(scrivi “annulla” per uscire)</small>',STEPS[0][2]]}
+ if(has(t,['prenot','tavolo','appuntament','posto','riserv'])){if(!D.wa_prenota)return [call('Per prenotare chiamaci'),null];st=0;bk={};T('prenotazione-iniziata');return [STEPS[0][1]+' <small>(scrivi “annulla” per uscire)</small>',STEPS[0][2]]}
  var prezzo=has(t,['prezz','cost','quanto','listino','euro']);
  if(has(t,['orari','orario','aper','chius','chiude','apre','lunedi','martedi','mercoledi','giovedi','venerdi','sabato','domenica','oggi','domani','stasera','festiv','quando']))return [orari(t),null];
  if(has(t,['dove','indirizz','parchegg','arriv','raggiung','mappa','posizione','zona','via ','strada']))return [dove(t),null];
