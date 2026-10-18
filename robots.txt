@@ -1,0 +1,3 @@
+# Anteprime private Sito Già Pronto: non indicizzare
+User-agent: *
+Disallow: /
