@@ -4,7 +4,7 @@ var d=document,el=d.getElementById('chat-data');if(!el)return;
 var D;try{D=JSON.parse(el.textContent)}catch(x){return}
 var css=d.createElement('link');css.rel='stylesheet';css.href='chat.css';d.head.appendChild(css);
 var GG=['dom','lun','mar','mer','gio','ven','sab'],GN={lun:'lunedì',mar:'martedì',mer:'mercoledì',gio:'giovedì',ven:'venerdì',sab:'sabato',dom:'domenica'};
-var RIST=D.tipo=='ristorante',st=null,bk={},hist=[];
+var DA=/^da /i.test(D.nome)?'':'da ',RIST=D.tipo=='ristorante',st=null,bk={},hist=[];
 function h(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function norm(t){return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9: ]+/g,' ')}
 function tel(){return '<a href="'+h(D.tel_href)+'">'+h(D.telefono)+'</a>'}
@@ -40,7 +40,7 @@ function has(t,ws){return ws.some(function(w){return new RegExp('(^| )'+w).test(
 function giorno(t){var m={lun:/lunedi/,mar:/martedi/,mer:/mercoledi/,gio:/giovedi/,ven:/venerdi/,sab:/sabato/,dom:/domenica/};for(var k in m)if(m[k].test(t))return k;
  if(/\boggi\b|stasera|stamattina/.test(t))return GG[new Date().getDay()];if(/domani/.test(t))return GG[(new Date().getDay()+1)%7];return null}
 function orari(t){var g=giorno(t);
- if(!D.orari)return (D.orari_testo?h(D.orari_testo)+' ':'')+call(D.orari_testo?'Per gli orari esatti meglio chiamarci':'');
+ if(!D.orari)return (D.orari_testo?h(D.orari_testo)+'<br>':'')+call();
  if(g){var f=fasce(g);return (f?'Di '+GN[g]+' siamo aperti '+f+'.':'Di '+GN[g]+' siamo chiusi.')+(D.orari_nota?' <small>'+h(D.orari_nota)+'</small>':'')}
  return 'I nostri orari:<br>'+['lun','mar','mer','gio','ven','sab','dom'].map(function(k){return GN[k]+': '+(fasce(k)||'chiuso')}).join('<br>')+(D.orari_nota?'<br><small>'+h(D.orari_nota)+'</small>':'')}
 function dove(t){var r='Siamo in '+h(D.indirizzo)+'. <a href="'+h(D.dir_href)+'" target="_blank" rel="noopener">Indicazioni su Google Maps →</a>';
@@ -58,7 +58,7 @@ function menu(t,prezzo){var r=voci(t),hit=r[0],w=r[1];
 var STEPS=[['giorno','Per che giorno?',['Oggi','Domani','Sabato','Domenica']],['ora','A che ora?',RIST?['13:00','20:00','21:00']:['10:00','15:00','17:00']],
  RIST?['chi','Per quante persone?',['2','4','6']]:['chi','Per quale servizio?',(D.servizi||[]).map(function(x){return x.titolo})],['nome','A che nome?',[]]];
 function wa(){var chi=RIST?(bk.chi+(/^\d+$/.test(bk.chi)?(bk.chi=='1'?' persona':' persone'):'')):bk.chi;
- var g=bk.giorno.toLowerCase(),txt='Ciao, vorrei prenotare da '+D.nome+' per '+g+' alle '+bk.ora+', '+chi+', a nome '+bk.nome+'. (dal sito demo di '+D.nome+')';
+ var g=bk.giorno.toLowerCase(),txt='Ciao, vorrei prenotare '+DA+D.nome+' per '+g+' alle '+bk.ora+', '+chi+', a nome '+bk.nome+'. (dal sito demo di '+D.nome+')';
  return ['Riepilogo: <b>'+h(g)+'</b> alle <b>'+h(bk.ora)+'</b>, '+h(chi)+', a nome <b>'+h(bk.nome)+'</b>.<br><a class="cwa" href="https://wa.me/'+h(D.wa_prenota)+'?text='+encodeURIComponent(txt)+'" target="_blank" rel="noopener">Prenota su WhatsApp</a><br><small>La prenotazione è confermata solo dopo la risposta su WhatsApp.</small>',null]}
 function flow(v){bk[STEPS[st][0]]=v;st++;if(st<STEPS.length)return [STEPS[st][1],STEPS[st][2]];st=null;return wa()}
 function rules(q){var t=norm(q);
@@ -70,7 +70,7 @@ function rules(q){var t=norm(q);
  if(has(t,['telefon','chiama','numero','cellulare','contatt']))return ['Chiamaci al '+tel()+'.',null];
  if(prezzo||has(t,['menu','servizi','servizio','piatt','pizz','mangi','cucin','taglio','colore','piega','capelli','tinta','trattament','cosa fate','avete','fate','specialit','bere','caffe','colazion']))return [menu(t,prezzo),null];
  if(has(t,['ciao','salve','buongiorno','buonasera']))return ['Ciao! Come posso aiutarti?',QR];
- if(has(t,['grazie']))return ['Grazie a te! A presto da '+h(D.nome)+'.',null];
+ if(has(t,['grazie']))return ['Grazie a te! A presto '+DA+h(D.nome)+'.',null];
  return ['Non sono sicuro di aver capito. Posso aiutarti con queste cose:',QR]}
 function send(q){add('me',h(q));hist.push(q);
  if(D.endpoint&&st===null){fetch(D.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:D.slug,domanda:q,storia:hist.slice(-8)})})
