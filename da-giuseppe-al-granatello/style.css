@@ -282,3 +282,19 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .hero-media:empty{background:radial-gradient(120% 80% at 80% 10%,color-mix(in srgb,var(--accent) 70%,#000) 0%,transparent 60%),radial-gradient(90% 70% at 0% 100%,color-mix(in srgb,var(--accent2) 55%,#000) 0%,transparent 60%),#111}
 /* Etichetta hero leggibile sopra le illustrazioni */
 .hero--art .hero-in>.eyebrow{text-shadow:0 1px 10px rgba(0,0,0,.65);background:rgba(0,0,0,.28);padding:8px 14px 8px 12px;border-radius:999px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+/* Riquadro "La vostra segreteria WhatsApp" (JSON attività -> segreteria) */
+.segr-wrap{padding:clamp(40px,7vw,72px) 0 0}
+.segr{padding:22px 20px 22px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);max-width:46rem;margin:0 auto}
+.segr .eyebrow{font-size:.7rem;letter-spacing:.14em}
+.segr-title{margin:12px 0 10px;font:600 clamp(1.45rem,4.6vw,2rem)/1.15 var(--display);color:var(--ink)}
+.segr-intro{margin:0 0 18px;color:var(--muted);font-size:1rem;line-height:1.55}
+.segr-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:12px}
+.segr-list li{position:relative;padding:12px 14px 12px 44px;border-radius:12px;background:color-mix(in srgb,var(--accent) 6%,transparent);border:1px solid var(--line)}
+.segr-list li::before{content:"";position:absolute;left:14px;top:15px;width:18px;height:18px;border-radius:50%;background:#1fa855 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
+.segr-list b{display:block;color:var(--ink);font-size:1rem;line-height:1.35}
+.segr-list span{display:block;margin-top:3px;color:var(--muted);font-size:.92rem;line-height:1.5}
+.segr .btn.segr-btn{background:#1fa855;color:#fff;width:100%;box-shadow:0 8px 24px -10px rgba(31,168,85,.7)}
+.segr .btn.segr-btn svg{width:20px;height:20px}
+.segr-note{margin:10px 0 0;font-size:.8rem;color:var(--muted);text-align:center}
+@media (min-width:760px){.segr{padding:30px 34px}.segr-list{grid-template-columns:repeat(3,1fr)}.segr-list li{padding:44px 16px 16px}.segr-list li::before{left:16px;top:16px}.segr .btn.segr-btn{width:auto}.segr-note{text-align:left}}
