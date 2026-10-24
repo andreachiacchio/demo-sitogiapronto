@@ -73,7 +73,7 @@ function rules(q){var t=norm(q);
  if(has(t,['grazie']))return ['Grazie a te! A presto '+DA+h(D.nome)+'.',null];
  return ['Non sono sicuro di aver capito. Posso aiutarti con queste cose:',QR]}
 function send(q){add('me',h(q));hist.push(q);
- if(D.endpoint&&st===null){fetch(D.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:D.slug,domanda:q,storia:hist.slice(-8)})})
+ if(D.endpoint&&st===null&&!has(norm(q),['prenot','tavolo','appuntament','riserv'])){fetch(D.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:D.slug,domanda:q,storia:hist.slice(-8)})})
   .then(function(r){return r.json()}).then(function(j){if(!j||!j.risposta)throw 0;add('bot',h(j.risposta))}).catch(function(){var r=rules(q);add('bot',r[0],r[1])});return}
  var r=rules(q);setTimeout(function(){add('bot',r[0],r[1])},250)}
 })();
