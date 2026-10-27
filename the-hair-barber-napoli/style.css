@@ -298,3 +298,4 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .segr .btn.segr-btn svg{width:20px;height:20px}
 .segr-note{margin:10px 0 0;font-size:.8rem;color:var(--muted);text-align:center}
 @media (min-width:760px){.segr{padding:30px 34px}.segr-list{grid-template-columns:repeat(3,1fr)}.segr-list li{padding:44px 16px 16px}.segr-list li::before{left:16px;top:16px}.segr .btn.segr-btn{width:auto}.segr-note{text-align:left}}
+/*fix-foot*/.foot-grid{grid-template-columns:minmax(0,1fr)}.foot-grid>*{min-width:0}@media (min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}.reviews-top{grid-template-columns:minmax(0,1fr)}.reviews-top>*{min-width:0}@media (min-width:900px){.reviews-top{grid-template-columns:1fr auto}}
