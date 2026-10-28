@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Logo: carro attrezzi, H24">
+<rect width="64" height="64" rx="15" fill="#FFC20E"/>
+<rect x="3" y="3" width="58" height="58" rx="12" fill="none" stroke="#111" stroke-width="2.5"/>
+<text x="32" y="25" text-anchor="middle" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="19" fill="#111" letter-spacing="-.5">H24</text>
+<path d="M9 45 L35 36.5 L36.6 40.8 L11 49.5Z" fill="#111"/>
+<path d="M33 49.5V33.5H44.5L53 40.5V49.5Z" fill="#111"/>
+<path d="M38.5 36.8h4.8l4.6 3.8h-9.4Z" fill="#FFC20E"/>
+<rect x="9" y="48" width="46" height="4" rx="1.5" fill="#111"/>
+<circle cx="19" cy="52" r="5.2" fill="#111" stroke="#FFC20E" stroke-width="1.8"/>
+<circle cx="46" cy="52" r="5.2" fill="#111" stroke="#FFC20E" stroke-width="1.8"/>
+<circle cx="19" cy="52" r="1.6" fill="#FFC20E"/><circle cx="46" cy="52" r="1.6" fill="#FFC20E"/>
+</svg>

@@ -353,3 +353,76 @@ html.sp .story.ph .hero .wrap{position:relative;z-index:2}
  html.sp .story.ph .chap.last .btns{bottom:calc(144px + env(safe-area-inset-bottom))}
  html.sp .story.ph .chap.last .q{bottom:calc(206px + env(safe-area-inset-bottom))}
 }
+
+/* ===== De Lucia 24h: giallo/nero ===== */
+:root{--y:#FFC20E}
+#pbar{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--y);transform:scaleX(0);transform-origin:0 50%;z-index:99;pointer-events:none}
+mark.ph{white-space:nowrap;background:#ffe14d;color:#111;padding:.05em .35em;border-radius:4px;font-weight:700;font-size:.95em;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-transform:none;letter-spacing:0}
+.topbar .logo{display:flex;align-items:center;gap:9px}.lg-i{width:38px;height:38px;flex:none;border-radius:10px}
+.lg-f img{display:block;width:min(360px,100%);height:auto}
+@media(max-width:900px){.topbar .logo span{display:none}}
+@media(min-width:760px){html.st3 .story .hero h1,html.st2 .story .hero h1{font-size:min(var(--hero-fs),10.5vh)}}
+/* striscia scorrevole */
+.strip{background:var(--y);color:#111;overflow:hidden;white-space:nowrap;border-block:3px solid #111;position:relative;z-index:2}
+.strip-in{display:inline-flex;align-items:center;gap:22px;padding:13px 0;animation:mq 38s linear infinite;font:800 1.05rem/1 'Bricolage Grotesque',Inter,Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;will-change:transform}
+.strip-in span{flex:none}.strip-in i{width:12px;height:12px;background:#111;transform:rotate(45deg);flex:none;margin-right:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sezione carro attrezzi */
+#carro-attrezzi{background:#0a0b0e;color:#f6f2e8;position:relative;overflow:hidden;isolation:isolate;padding-block:clamp(54px,9vw,110px)}
+#carro-attrezzi .nt-bg{position:absolute;inset:-6% 0;background:linear-gradient(180deg,#0a0b0e 0%,rgba(10,11,14,.55) 38%,#0a0b0e 100%),url(img/notte.webp) center/cover no-repeat;opacity:.8;z-index:-1;transform:scale(1.06);will-change:transform}
+#carro-attrezzi .wrap{position:relative}
+#carro-attrezzi .eyebrow{color:var(--y)}
+#carro-attrezzi h2{font-size:clamp(2.6rem,9.5vw,6.2rem);line-height:.95;margin:.15em 0 .25em;letter-spacing:-.02em;text-transform:none}
+#carro-attrezzi h2 em{font-style:normal;color:#111;background:var(--y);padding:0 .14em;border-radius:.12em;display:inline-block;transform:rotate(-1.6deg)}
+.open-now{display:inline-flex;align-items:center;gap:10px;margin:0 0 10px;padding:7px 14px;border:1px solid rgba(255,194,14,.5);border-radius:99px;font-weight:700;font-size:.95rem;background:rgba(0,0,0,.45);backdrop-filter:blur(4px)}
+.open-now .dot{width:10px;height:10px;border-radius:50%;background:#2fe07a;box-shadow:0 0 0 0 rgba(47,224,122,.7);animation:pl 1.8s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 11px rgba(47,224,122,0)}100%{box-shadow:0 0 0 0 rgba(47,224,122,0)}}
+#carro-attrezzi .lead{max-width:34em;font-size:clamp(1.05rem,2.4vw,1.3rem);line-height:1.5;margin:.5em 0 1.2em}
+.call2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));margin:6px 0 34px}
+.call2 .btn.big{display:flex;justify-content:center;align-items:center;gap:14px;min-height:76px;border-radius:18px;background:var(--y);color:#111;text-decoration:none;padding:12px 18px;box-shadow:0 10px 30px -10px rgba(255,194,14,.55),inset 0 -4px 0 rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.call2 .btn.big span{display:flex;flex-direction:column;line-height:1.05;text-align:left}
+.call2 .btn.big small{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.call2 .btn.big b{font-size:clamp(1.55rem,5.6vw,2.15rem);font-weight:800;letter-spacing:.01em;white-space:nowrap}
+.call2 .btn.big svg{flex:none}
+.call2 .btn.big:hover{transform:translateY(-3px);box-shadow:0 16px 36px -10px rgba(255,194,14,.7),inset 0 -4px 0 rgba(0,0,0,.18)}
+.call2 .btn.big:active{transform:scale(.98)}
+.call2 .btn.big:focus-visible,.gal figure:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.call2b{margin:30px 0 22px}
+/* galleria */
+.gal-wrap{position:relative;margin:0 0 26px}
+.gal{display:grid;gap:14px;grid-template-columns:1.35fr 1fr 1fr}
+.gal figure{margin:0;position:relative;overflow:hidden;border-radius:16px;border:1px solid #2b303a;background:#000;cursor:zoom-in;aspect-ratio:4/3}
+.gal figure:first-child{aspect-ratio:auto}
+.gal img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-weight:700;font-size:.9rem;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.gal-nav{display:none}
+.cap-s{font-size:.8rem;opacity:.7;margin:8px 0 0}
+@media(max-width:759px){
+ .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .gal::-webkit-scrollbar{display:none}
+ .gal figure,.gal figure:first-child{flex:0 0 84%;scroll-snap-align:center;aspect-ratio:4/3}
+ .gal-nav{display:flex;justify-content:flex-end;gap:8px;margin:0 0 10px}
+ .gal-nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--y);background:#111;color:var(--y);font-size:1.5rem;line-height:1}
+}
+.vd{margin:0 0 34px}.vd video{display:block;width:100%;height:auto;border-radius:16px;border:1px solid #2b303a;background:#000;aspect-ratio:16/9;object-fit:cover}
+.vd figcaption{font-size:.8rem;opacity:.7;margin-top:6px}
+#carro-attrezzi .svh{margin:10px 0 0;font-size:1.15rem;color:var(--y);letter-spacing:.04em;text-transform:uppercase}
+#carro-attrezzi .svc-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));margin:12px 0 0}
+#carro-attrezzi .svc-card{background:rgba(24,27,33,.88);border:1px solid #2b303a;border-radius:16px;padding:18px;position:relative;transition:transform .25s,border-color .25s}
+#carro-attrezzi .svc-card:hover{transform:translateY(-4px);border-color:var(--y)}
+#carro-attrezzi .svc-card .n{position:absolute;right:14px;top:10px;font:800 2.2rem/1 'Bricolage Grotesque',Inter,sans-serif;color:rgba(255,194,14,.2)}
+#carro-attrezzi .svc-card h3{margin:0 0 6px;font-size:1.2rem;color:var(--y)}#carro-attrezzi .svc-card p{margin:.3em 0;line-height:1.5}
+#carro-attrezzi .src-note{font-size:.85rem;opacity:.7}
+.h24-c{margin:16px 0 0;line-height:1.7}.h24-c a,#orari .addr a{color:var(--y);font-weight:700}
+/* comparsa allo scroll: solo con JS e movimento consentito */
+html.fx-on .fx{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1) var(--d,0s),transform .8s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+html.fx-on .fx.in{opacity:1;transform:none}
+/* ingrandimento foto */
+dialog.zm{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;overflow:visible}
+dialog.zm::backdrop{background:rgba(0,0,0,.88)}
+dialog.zm img{display:block;max-width:96vw;max-height:90vh;border-radius:12px}
+dialog.zm button{position:absolute;right:6px;top:-44px;width:40px;height:40px;border-radius:50%;border:0;background:var(--y);color:#111;font-size:1.6rem;line-height:1}
+@media(prefers-reduced-motion:reduce){.strip-in{animation:none}.open-now .dot{animation:none}.gal img,.call2 .btn.big,#carro-attrezzi .svc-card{transition:none}}
+
+.story .hero h1 .w{white-space:nowrap}
