@@ -1,0 +1,55 @@
+*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body{margin:0;font:16px/1.55 Inter,system-ui,sans-serif;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}a{color:inherit}svg{width:1.15em;height:1.15em;flex:none}h1,h2,h3{margin:0;line-height:1.1;text-wrap:balance}p{margin:0}figure{margin:0}blockquote{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.stars{display:inline-flex;gap:1px;color:#f5b400}.stars svg{width:16px;height:16px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;border-radius:14px;text-decoration:none;font-weight:700;font-size:13px}
+.bar svg{width:22px;height:22px}
+.orari{width:100%;border-collapse:collapse}.orari th,.orari td{padding:11px 0;text-align:left;font-weight:500}.orari td{text-align:right;font-variant-numeric:tabular-nums}
+.orari tr.oggi th,.orari tr.oggi td{font-weight:800}
+.small{font-size:12.5px;line-height:1.55}
+@media(min-width:900px){body{padding-bottom:0}.bar{display:none}}
+body.C{background:#eceef2;color:#14161a}
+.C{--acc:#1747c9;--wa:#1faa59}
+.C .app{max-width:480px;margin:0 auto;padding:12px 12px 8px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.C .card{background:#fff;border-radius:22px;padding:18px;box-shadow:0 1px 2px rgba(16,24,40,.06)}
+.C h2{display:flex;align-items:center;gap:8px;font:800 19px Manrope,sans-serif;letter-spacing:-.01em}
+.C .prof{padding:0 0 18px;overflow:hidden;text-align:center}
+.C .cover img{width:100%;aspect-ratio:2.1/1;object-fit:cover}
+.C .pin{margin:-40px auto 0;position:relative;width:84px;height:84px;border-radius:50%;background:#fff;padding:4px}
+.C .logo{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#1747c9,#0f2f8a);color:#fff;font:800 26px Manrope,sans-serif;letter-spacing:-.02em}
+.C h1{font:800 27px/1.1 Manrope,sans-serif;letter-spacing:-.025em;margin-top:10px}
+.C .sub{color:#5b616e;margin-top:4px}
+.C .meta{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:14px}
+.C .meta a{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#14161a;background:#f3f4f6;padding:6px 12px;border-radius:999px}
+.C .meta a svg{color:#f5b400;width:16px;height:16px}
+.C .status{font-weight:700;font-size:13.5px;padding:6px 12px;border-radius:999px;background:#f3f4f6}
+.C .status.si{background:#dcfce7;color:#166534}.C .status.no{background:#fee2e2;color:#991b1b}
+.C .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 16px 0}
+.C .act{display:flex;flex-direction:column;align-items:center;gap:5px;padding:14px 4px;border-radius:16px;background:#f1f3f7;text-decoration:none;font-weight:700;font-size:13.5px;color:#14161a}
+.C .act svg{width:24px;height:24px;color:var(--acc)}.C .act.wa{background:var(--wa);color:#fff}.C .act.wa svg{color:#fff}
+.C .scroll{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:14px -18px 0;padding:0 18px 4px;scrollbar-width:none}
+.C .scroll::-webkit-scrollbar{display:none}
+.C .gal figure{flex:0 0 72%;scroll-snap-align:start;position:relative}
+.C .gal img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.C .gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
+.C .fonte{font-size:12.5px;color:#7a808c;margin-top:10px}
+.C .chips{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.C .chips li{background:#eef2ff;color:#1e3a8a;font-weight:700;font-size:14px;padding:8px 13px;border-radius:999px}
+.C .txt{margin-top:12px;color:#3b414d;font-size:15px}
+.C .h2row{display:flex;justify-content:space-between;align-items:center}
+.C .h2row a{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14px;text-decoration:none;background:#f3f4f6;padding:6px 11px;border-radius:999px}
+.C .revs .rc{flex:0 0 82%;scroll-snap-align:start;background:#f6f7f9;border-radius:16px;padding:16px;display:flex;flex-direction:column}
+.C .rc blockquote{margin:10px 0 12px;font-size:15px;line-height:1.5;flex:1}
+.C .rc figcaption{font-size:13px;color:#6b7280}.C .rc figcaption strong{color:#14161a}
+.C .links{display:grid;gap:8px}
+.C .lk{display:flex;align-items:center;gap:12px;min-height:60px;padding:0 18px;background:#fff;border-radius:18px;text-decoration:none;font-weight:700;font-size:15.5px;box-shadow:0 1px 2px rgba(16,24,40,.06)}
+.C .lk span{flex:1}.C .lk svg:first-child{width:22px;height:22px;color:var(--acc)}.C .lk svg:last-child{color:#9ca3af}
+.C .lk.wa{background:var(--wa);color:#fff}.C .lk.wa svg{color:#fff!important}
+.C details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.C details summary::-webkit-details-marker{display:none}
+.C .orari{margin-top:10px;font-size:15px}.C .orari tr+tr{border-top:1px solid #eef0f3}.C .orari tr.oggi th,.C .orari tr.oggi td{color:var(--acc)}
+.C .foot{max-width:480px;margin:0 auto;padding:18px 16px 24px;color:#6b7280;font-size:13.5px}.C .foot .wrap{padding:0}.C .foot p+p{margin-top:10px}
+.C .bar{background:rgba(236,238,242,.92);backdrop-filter:blur(10px);padding-left:max(12px,calc(50% - 228px));padding-right:max(12px,calc(50% - 228px))}
+.C .bar a{background:#fff;color:#14161a}.C .bar .b-wa{background:var(--wa);color:#fff}
+@media(min-width:900px){body.C{padding:24px 0 0}}
