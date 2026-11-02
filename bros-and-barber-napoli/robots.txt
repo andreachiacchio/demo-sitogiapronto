@@ -1,3 +1,0 @@
-# Anteprima privata: non indicizzare
-User-agent: *
-Disallow: /
