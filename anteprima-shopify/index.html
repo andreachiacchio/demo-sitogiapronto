@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gestione store Shopify – 99 € al mese – Sito Già Pronto</title>
+<meta name="description" content="99 € al mese e ci occupiamo noi di tutto. Farmacia Soccavo, Scodinzolando e Amoura sono nostri e li gestiamo ogni giorno. Scriveteci su WhatsApp Shopify.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#07080b">
+<link rel="canonical" href="https://demo.sitogiapronto.it/anteprima-shopify/">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Bricolage";src:url(assets/fonts/bricolage.woff2) format("woff2");font-weight:400 800;font-display:swap}
+@font-face{font-family:"Inter";src:url(assets/fonts/inter.woff2) format("woff2");font-weight:400 700;font-display:swap}
+:root{
+  --bg:#07080b;--bg2:#0d0e13;--card:#12131a;--ink:#f6f1e8;--muted:#9a9488;--line:rgba(255,255,255,.09);
+  --amber:#f2a93b;--amber-deep:#c7801a;--amber-soft:#fff1d6;--wa:#1db954;--wa-deep:#168a45;
+  --display:"Bricolage","Inter",sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1120px;--pad:22px;--r:22px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.04;letter-spacing:-.03em;margin:0}
+h2{font-size:clamp(2rem,6.2vw,3.3rem);margin:12px 0 20px}
+h3{font-size:1.3rem;letter-spacing:-.02em}
+.wrap{width:min(var(--wrap),100% - var(--pad)*2);margin-inline:auto}
+.narrow{max-width:720px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 .72rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.sec{position:relative;z-index:1;padding:clamp(64px,10vw,120px) 0}
+.sec-lead{color:var(--muted);margin:-6px 0 32px;font-size:1.08rem;max-width:54ch}
+
+/* Glow di sfondo in movimento */
+.glow,.glow-2{position:fixed;pointer-events:none;z-index:0;border-radius:50%;filter:blur(90px);opacity:.85}
+.glow{width:58vw;height:58vw;min-width:420px;background:rgba(242,169,59,.18);top:-18%;left:-12%;animation:drift 22s ease-in-out infinite alternate}
+.glow-2{width:50vw;height:50vw;min-width:380px;background:rgba(29,185,84,.12);bottom:-22%;right:-14%;animation:drift 26s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(14%,18%)}}
+.dots{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000 0%,transparent 80%)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:56px;padding:0 26px;border-radius:999px;background:var(--ink);color:var(--bg);font:700 1.02rem/1 var(--body);text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.btn:active{transform:scale(.97)}
+.btn.wa{background:var(--wa);color:#07240f;box-shadow:0 12px 32px -14px rgba(29,185,84,.8)}
+.btn.wa:hover{background:#22cc5e}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.22)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn svg{flex:none}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(7,8,11,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line);color:#fff}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:inline-flex;align-items:center;gap:10px;font:800 1.15rem/1 var(--display);text-decoration:none;letter-spacing:-.02em}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(242,169,59,.22)}
+.top-wa{min-height:40px;display:inline-flex;align-items:center;gap:.4em;padding:0 16px;border-radius:999px;background:var(--wa);color:#07240f;font-weight:700;font-size:.9rem;text-decoration:none}
+
+.prova-banner{position:relative;z-index:2;background:var(--amber);color:#1a1306;text-align:center;padding:10px 16px;font:700 .9rem/1.4 var(--body)}
+
+.hero{position:relative;z-index:1;padding:clamp(28px,5vw,64px) 0 clamp(28px,6vw,64px);overflow:hidden}
+.hero-grid{display:grid;gap:48px}
+.hero h1{margin-top:14px}
+.hero .price{display:block;font:800 clamp(2.4rem,8.6vw,4.8rem)/.98 var(--display);letter-spacing:-.045em;text-wrap:balance}
+.hero .price em{font-style:normal;color:var(--amber);background:linear-gradient(100deg,#f6d48a,var(--amber) 35%,#fff 50%,var(--amber) 65%,#c7801a);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 5.5s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.hero .claim{display:block;margin-top:.12em}
+.hero .title2{margin-top:22px;font:700 clamp(1.15rem,2.6vw,1.55rem)/1.3 var(--display);letter-spacing:-.02em;color:rgba(246,241,232,.92);text-wrap:balance}
+.lead{font-size:clamp(1.05rem,2.2vw,1.22rem);color:rgba(246,241,232,.68);max-width:44ch;margin-top:16px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.wa-note{margin-top:16px;color:rgba(246,241,232,.55);font-size:.95rem}
+.wa-note a{color:var(--ink);font-weight:700;text-decoration:none}
+
+.stats{display:flex;flex-wrap:wrap;gap:18px 36px;margin-top:22px}
+.stat b{display:block;font:800 clamp(2rem,5vw,2.8rem)/1 var(--display);letter-spacing:-.04em;color:var(--amber)}
+.stat span{display:block;margin-top:4px;color:var(--muted);font-size:.92rem}
+
+.stage{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center}
+.browser{width:min(100%,560px);border-radius:16px;background:#16171d;overflow:hidden;box-shadow:0 40px 80px -28px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.08);transform-origin:center;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#101116;border-bottom:1px solid rgba(255,255,255,.06)}
+.dots-bar{display:flex;gap:6px}
+.dots-bar i{width:8px;height:8px;border-radius:50%;background:#ff5f57}
+.dots-bar i:nth-child(2){background:#febc2e}
+.dots-bar i:nth-child(3){background:#28c840}
+.urlbar{flex:1;margin-left:8px;background:#0a0b0f;border-radius:8px;padding:5px 10px;font-size:.72rem;color:#8b8680;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center}
+.phone{position:absolute;width:188px;aspect-ratio:9/19.3;border-radius:32px;background:#0b0b0e;padding:8px;box-shadow:0 0 0 2px #2a2a32,0 30px 60px -24px rgba(0,0,0,.85);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:38%;height:14px;border-radius:999px;background:#000;z-index:2}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:24px;background:#111}
+.phone.p1{left:-8px;bottom:6%;z-index:3}
+.browser{z-index:2}
+@media (hover:hover){
+  .browser:hover{transform:translateY(-10px) rotate(-1.1deg)}
+  .phone.p1:hover{transform:translateY(-10px) rotate(-2deg)}
+  .phone.p2:hover{transform:translateY(-10px) rotate(2deg)}
+}
+
+.marquee{position:relative;z-index:1;background:var(--amber);color:#1a1306;overflow:hidden;padding:14px 0;font:800 1.05rem/1 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.marquee div{display:inline-block;animation:marq 28s linear infinite}
+.marquee span{display:inline-block;padding:0 22px}
+.marquee span::after{content:"✦";margin-left:44px;opacity:.6}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+.stores{display:grid;gap:22px}
+.store{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 50px -32px rgba(0,0,0,.7);display:flex;flex-direction:column;transition:transform .35s ease,border-color .35s}
+@media (hover:hover){.store:hover{transform:translateY(-6px);border-color:rgba(242,169,59,.35)}}
+.store a.shotlink{display:block;text-decoration:none;background:#101116}
+.store .browser-bar{padding:8px 10px}
+.store a.shotlink img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center center}
+.store-body{padding:22px 22px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.store h3{font-size:1.45rem}
+.store .domain{font:700 .92rem/1.3 var(--body);color:var(--amber);text-decoration:none}
+.store .domain:hover{text-decoration:underline}
+.store .block{margin:6px 0 0}
+.store .block b{display:block;font:700 .7rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.store .block p{color:rgba(246,241,232,.88);font-size:1rem;line-height:1.5}
+
+.work{display:grid;gap:18px}
+.work article{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 24px 28px;transition:transform .35s ease,border-color .35s}
+@media (hover:hover){.work article:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.18)}}
+.work .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(242,169,59,.12);color:var(--amber);margin-bottom:16px}
+.work h3{margin-bottom:8px}
+.work p{color:var(--muted)}
+
+.pricebox{position:relative;max-width:760px;margin:auto;border-radius:30px;padding:1px;background:linear-gradient(135deg,var(--amber),rgba(242,169,59,.15) 42%,rgba(29,185,84,.4))}
+.pricebox-in{border-radius:29px;background:linear-gradient(180deg,#14151c,var(--bg));padding:clamp(28px,6vw,52px)}
+.pricebox .eyebrow{color:var(--amber)}
+.pricebox .big{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px;margin:8px 0 10px}
+.pricebox .big b{font:800 clamp(4.2rem,16vw,6.6rem)/.9 var(--display);letter-spacing:-.06em}
+.pricebox .big small{font:600 1.15rem/1.3 var(--display);color:rgba(246,241,232,.8);max-width:16ch}
+.pricebox .intro{color:rgba(246,241,232,.7);margin:0 0 22px;font-size:1.08rem}
+.pricebox ul{margin:0 0 28px;padding:0;list-style:none;display:grid;gap:12px}
+.pricebox li{display:flex;align-items:flex-start;gap:12px;color:rgba(246,241,232,.92)}
+.pricebox li svg{flex:none;margin-top:2px;color:var(--wa)}
+.pricebox li b{font-weight:700}
+.pricebox .btn{width:100%}
+
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;counter-reset:s}
+.steps li{position:relative;padding:26px 22px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);overflow:hidden}
+.steps li::before{counter-increment:s;content:"0" counter(s);position:absolute;right:14px;top:-6px;font:800 4.4rem/1 var(--display);letter-spacing:-.06em;color:rgba(242,169,59,.16)}
+.steps p{position:relative;font-size:1.08rem;font-weight:500;max-width:32ch;padding-right:76px}
+
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(22px,4vw,40px)}
+.form-card h2{margin-top:0}
+.fields{display:grid;gap:16px;margin:8px 0 22px}
+label{display:grid;gap:6px;font:700 .82rem/1 var(--body);letter-spacing:.04em}
+input,textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:14px;font:400 1rem/1.4 var(--body);background:#0a0b0f;color:var(--ink);outline:none;transition:border-color .15s}
+input:focus,textarea:focus{border-color:var(--amber)}
+input::placeholder,textarea::placeholder{color:#6d6860}
+textarea{min-height:120px;resize:vertical}
+.pair{display:grid;gap:16px}
+.form-hint{color:var(--muted);font-size:.92rem;margin:0 0 16px}
+.form-error{display:none;background:#3a1515;color:#ffc9c9;border-radius:12px;padding:10px 14px;font-size:.95rem;font-weight:600;margin-bottom:14px}
+.form-error.on{display:block}
+
+.final{position:relative;z-index:1;text-align:center;padding:clamp(72px,12vw,140px) 0;overflow:hidden}
+.final h2{font-size:clamp(2.2rem,8vw,4.2rem);margin-bottom:18px;text-wrap:balance}
+.final .final-lead{margin:0 auto 28px;color:rgba(246,241,232,.7);font-size:clamp(1.08rem,2.4vw,1.25rem);max-width:36ch}
+.firma{margin-top:26px;color:var(--muted);font-size:.95rem}
+.firma b{color:var(--ink)}
+
+.foot{position:relative;z-index:1;background:transparent;color:var(--muted);padding:34px 0 120px;font-size:.9rem;border-top:1px solid var(--line)}
+.foot b{color:var(--ink)}
+.foot p+p{margin-top:10px}
+.foot .legal{font-size:.78rem}
+.foot a{color:rgba(246,241,232,.8)}
+
+.float-wa{position:fixed;z-index:60;display:inline-flex;align-items:center;justify-content:center;gap:.5em;border-radius:999px;background:var(--wa);color:#07240f;font-weight:800;text-decoration:none;box-shadow:0 14px 34px -10px rgba(29,185,84,.7)}
+@media (max-width:759px){
+  .float-wa{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));min-height:58px;font-size:1.05rem}
+  .cta .btn,.pricebox .btn,.form-actions .btn,.final .btn{width:100%}
+  .pricebox-in,.form-card,.final .wrap,.store{margin-bottom:8px}
+  .sec,#prezzo,#contatti,.final{padding-bottom:calc(clamp(64px,10vw,120px) + 70px)}
+  .foot{padding-bottom:120px}
+  .stage{min-height:0;display:flex;justify-content:center;padding:12px 0 24px}
+  .browser{display:none}
+  .phone.p1{display:block;position:relative;left:auto;bottom:auto;width:min(220px,70vw);margin:0 auto 88px}
+  .form-actions{padding-bottom:88px}
+  .stats{margin-bottom:72px}
+}
+@media (min-width:760px){
+  .hero-grid{grid-template-columns:1.02fr .98fr;align-items:center;gap:28px}
+  .stage{min-height:480px}
+  .stores{grid-template-columns:repeat(3,1fr)}
+  .work{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .steps li{padding-top:64px}
+  .steps p{padding-right:0}
+  .pair{grid-template-columns:1fr 1fr}
+  .pricebox .btn{width:auto}
+  .float-wa{right:22px;bottom:22px;left:auto;min-height:54px;padding:0 20px}
+  .foot{padding-bottom:48px}
+}
+
+/* Comparsa allo scroll */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* Titolo animato */
+.anim span{display:inline-block;opacity:0;transform:translateY(1.1em);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.anim .d1{animation-delay:.08s}.anim .d2{animation-delay:.2s}.anim .d3{animation-delay:.36s}
+.anim-sub{opacity:0;transform:translateY(16px);animation:rise .8s .5s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .glow,.glow-2,.marquee div,.hero .price em,.anim span,.anim-sub{animation:none!important}
+  .anim span,.anim-sub,.rv{opacity:1;transform:none;transition:none}
+  .glow,.glow-2{transform:none}
+  @media (hover:hover){
+    .browser:hover,.phone:hover,.store:hover,.work article:hover{transform:none}
+  }
+}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<div class="glow-2" aria-hidden="true"></div>
+<div class="dots" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="logo" href="#top"><i aria-hidden="true"></i>Sito Già Pronto</a>
+    <a class="top-wa" href="https://wa.me/393514512070" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<div class="prova-banner">Versione di prova — non è il sito vero. Online sul sito vero solo con l'ok di Andrea.</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Gestione store Shopify</span>
+        <h1 class="anim">
+          <span class="price"><span class="d1"><em>99 € al mese,</em></span> <span class="claim d2">tutto compreso. Senza vincoli.</span></span>
+        </h1>
+        <p class="title2 anim-sub">Voi vendete. Al vostro Shopify pensiamo noi.</p>
+        <p class="lead">Abbiamo costruito tre store e li gestiamo ancora ogni giorno: Farmacia Soccavo, Scodinzolando e Amoura. Ora facciamo lo stesso con il vostro.</p>
+        <div class="cta">
+          <a class="btn wa" href="#contatti"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg> Scriveteci su WhatsApp</a>
+          <a class="btn ghost" href="#store">Guardate i nostri store</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="3">3</b><span>store gestiti</span></div>
+          <div class="stat"><b data-count="6000" data-prefix="oltre " data-it="1">oltre 6.000</b><span>prodotti su Amoura</span></div>
+        </div>
+      </div>
+      <div class="stage" id="hero-stage">
+        <a class="phone p1 js-tilt" href="https://farmaciasoccavo.it/" target="_blank" rel="noopener" data-depth="14">
+          <img src="assets/store/farmacia-soccavo-mobile.webp" width="780" height="1688" alt="Home di Farmacia Soccavo sul telefono">
+        </a>
+        <a class="browser js-tilt" href="https://scodinzolando.com/" target="_blank" rel="noopener" data-depth="8">
+          <div class="browser-bar"><span class="dots-bar" aria-hidden="true"><i></i><i></i><i></i></span><span class="urlbar">scodinzolando.com</span></div>
+          <img src="assets/store/scodinzolando.webp" width="1440" height="900" alt="Home page di scodinzolando.com">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div>
+      <span>99 € al mese</span><span>Tutto compreso</span><span>Schede e foto</span><span>SEO e guide</span><span>Fornitore e ordini</span><span>Offerte ed email</span><span>Social</span><span>99 € al mese</span><span>Tutto compreso</span><span>Schede e foto</span><span>SEO e guide</span><span>Fornitore e ordini</span><span>Offerte ed email</span><span>Social</span>
+    </div>
+  </div>
+
+  <section class="sec" id="store">
+    <div class="wrap">
+      <span class="eyebrow">Casi veri</span>
+      <h2 class="rv">I nostri store, non quelli di altri</h2>
+      <p class="sec-lead">Non vi mostriamo lavori fatti per altri: vi mostriamo i nostri store, quelli su cui investiamo i nostri soldi.</p>
+      <div class="stores">
+        <article class="store rv">
+          <a class="shotlink" href="https://farmaciasoccavo.it/" target="_blank" rel="noopener">
+            <div class="browser-bar"><span class="dots-bar" aria-hidden="true"><i></i><i></i><i></i></span><span class="urlbar">farmaciasoccavo.it</span></div>
+            <img src="assets/store/farmacia-soccavo.webp" width="1440" height="900" alt="Home page di farmaciasoccavo.it" loading="lazy">
+          </a>
+          <div class="store-body">
+            <h3>Farmacia Soccavo</h3>
+            <a class="domain" href="https://farmaciasoccavo.it/" target="_blank" rel="noopener">farmaciasoccavo.it</a>
+            <div class="block"><b>Cosa vende</b><p>Farmacia online: farmaci da banco, integratori e cosmetici, consegna in 24/48 ore.</p></div>
+            <div class="block"><b>Cosa abbiamo fatto</b><p>Fatto da noi, gestito da noi ogni giorno: schede, SEO, guide, fornitore, ordini e social.</p></div>
+          </div>
+        </article>
+        <article class="store rv d1">
+          <a class="shotlink" href="https://scodinzolando.com/" target="_blank" rel="noopener">
+            <div class="browser-bar"><span class="dots-bar" aria-hidden="true"><i></i><i></i><i></i></span><span class="urlbar">scodinzolando.com</span></div>
+            <img src="assets/store/scodinzolando.webp" width="1440" height="900" alt="Home page di scodinzolando.com" loading="lazy">
+          </a>
+          <div class="store-body">
+            <h3>Scodinzolando</h3>
+            <a class="domain" href="https://scodinzolando.com/" target="_blank" rel="noopener">scodinzolando.com</a>
+            <div class="block"><b>Cosa vende</b><p>Farmacia veterinaria e pet shop online per cani e gatti.</p></div>
+            <div class="block"><b>Cosa abbiamo fatto</b><p>Fatto da noi, gestito da noi ogni giorno: schede, SEO, guide, fornitore, ordini e social.</p></div>
+          </div>
+        </article>
+        <article class="store rv d2">
+          <a class="shotlink" href="https://amoura.it/" target="_blank" rel="noopener">
+            <div class="browser-bar"><span class="dots-bar" aria-hidden="true"><i></i><i></i><i></i></span><span class="urlbar">amoura.it</span></div>
+            <img src="assets/store/amoura.webp" width="1440" height="900" alt="Logo di Amoura" loading="lazy">
+          </a>
+          <div class="store-body">
+            <h3>Amoura</h3>
+            <a class="domain" href="https://amoura.it/" target="_blank" rel="noopener">amoura.it</a>
+            <div class="block"><b>Cosa vende</b><p>Benessere intimo e cosmetica di coppia, oltre 6.000 prodotti collegati al fornitore.</p></div>
+            <div class="block"><b>Cosa abbiamo fatto</b><p>Fatto da noi, gestito da noi ogni giorno: schede, SEO, guide, fornitore, ordini e social.</p></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="cosa-facciamo" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Il servizio</span>
+      <h2 class="rv">Cosa facciamo noi</h2>
+      <div class="work">
+        <article class="rv">
+          <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg></div>
+          <h3>Store e schede</h3>
+          <p>Grafica, homepage e collezioni, schede prodotto con foto e descrizioni, versione da cellulare.</p>
+        </article>
+        <article class="rv d1">
+          <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M5 15l5-6 3 3 6-8"/><path d="M15 4h5v5"/></svg></div>
+          <h3>Crescita</h3>
+          <p>SEO e guide per farvi trovare su Google, offerte ed email ai vostri clienti.</p>
+        </article>
+        <article class="rv d2">
+          <div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v10H3z"/><path d="M3 11h18"/><path d="M7 7V5h10v2"/></svg></div>
+          <h3>Gestione</h3>
+          <p>Collegamento al fornitore, ordini, spedizioni e pagamenti, social del negozio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="sec" id="come-funziona">
+    <div class="wrap">
+      <span class="eyebrow">Il percorso</span>
+      <h2 class="rv">Come funziona</h2>
+      <ol class="steps">
+        <li class="rv"><p><b>Ci mandate il link</b> del vostro store su WhatsApp.</p></li>
+        <li class="rv d1"><p><b>Vi scriviamo gratis</b> i 3 interventi che faremmo per primi.</p></li>
+        <li class="rv d2"><p><b>Ci pensiamo noi</b>, a 99 € al mese, senza vincoli: potete smettere quando volete.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="contatti">
+    <div class="wrap narrow">
+      <div class="form-card rv">
+        <span class="eyebrow">WhatsApp</span>
+        <h2>Scriveteci su WhatsApp</h2>
+        <p class="form-hint">Mandateci il link e ricevete gratis i 3 interventi da fare subito. Il pulsante apre WhatsApp con il messaggio già pronto: lo inviate voi.</p>
+        <div class="form-error" id="form-error" role="alert"></div>
+        <form id="store-form" action="https://wa.me/393514512070" method="get" novalidate>
+          <div class="fields">
+            <label>Nome
+              <input type="text" name="nome" autocomplete="name" required placeholder="Il vostro nome">
+            </label>
+            <div class="pair">
+              <label>Email
+                <input type="email" name="email" autocomplete="email" placeholder="email@esempio.it" inputmode="email">
+              </label>
+              <label>Telefono
+                <input type="tel" name="telefono" autocomplete="tel" placeholder="Il vostro numero" inputmode="tel">
+              </label>
+            </div>
+            <p class="form-hint" style="margin:-4px 0 0">Basta uno dei due: email o telefono.</p>
+            <label>Link dello store
+              <input type="url" name="store" required placeholder="https://vostrostore.com" inputmode="url">
+            </label>
+            <label>Messaggio
+              <textarea name="messaggio" placeholder="Se volete, raccontateci in due righe cosa non va o cosa vi serve."></textarea>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="btn wa" type="submit"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg> Scriveteci su WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap narrow">
+      <h2 class="rv">Vediamo insieme il vostro store?</h2>
+      <p class="final-lead">Mandateci il link e ricevete gratis i 3 interventi da fare subito.</p>
+      <a class="btn wa rv d1" href="#contatti"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg> Scriveteci su WhatsApp</a>
+      <p class="firma"><b>Andrea Chiacchio</b>, fondatore di Farmacia Soccavo, Scodinzolando e Amoura</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Sito Già Pronto</b> · Napoli · WhatsApp 351 451 2070</p>
+    <p class="legal">Sito Già Pronto è un servizio di Villa Cristina S.R.L., la società che gestisce Sito Già Pronto ed emette le fatture – P.IVA 10969501211 – Via Santa Teresa a Chiaia 10, 80121 Napoli – REA NA-1145450.</p>
+    <p class="legal">Questo sito non usa cookie né contatori di terzi. <a href="https://sitogiapronto.it/privacy/">Informativa privacy</a></p>
+    <p class="legal">Questa è una versione di prova, non è il sito vero. Non viene indicizzata su Google.</p>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/393514512070" rel="noopener" aria-label="Scriveteci su WhatsApp"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg> Scriveteci su WhatsApp</a>
+
+<script>
+(function(){
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  var stats=document.querySelectorAll('.stat b[data-count]');
+  function runCount(el){
+    var end=parseInt(el.getAttribute('data-count'),10);
+    var prefix=el.getAttribute('data-prefix')||'';
+    var useIt=el.getAttribute('data-it')==='1';
+    if(reduce){
+      el.textContent=prefix+(useIt?end.toLocaleString('it-IT'):String(end));
+      return;
+    }
+    var t0=null, dur=1100;
+    function fmt(n){return prefix+(useIt?Math.round(n).toLocaleString('it-IT'):String(Math.round(n)));}
+    function step(ts){
+      if(!t0) t0=ts;
+      var p=Math.min(1,(ts-t0)/dur);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=fmt(end*eased);
+      if(p<1) requestAnimationFrame(step);
+    }
+    el.textContent=fmt(0);
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){runCount(x.target);so.unobserve(x.target)}})},{threshold:.4});
+    stats.forEach(function(s){so.observe(s)});
+  } else {stats.forEach(runCount)}
+
+  if(!reduce){
+    var stage=document.getElementById('hero-stage');
+    var parts=document.querySelectorAll('#hero-stage [data-depth]');
+    function para(){
+      if(!stage) return;
+      var r=stage.getBoundingClientRect();
+      var mid=r.top+r.height/2;
+      var vh=window.innerHeight||800;
+      var d=(mid-vh/2)/vh;
+      parts.forEach(function(el){
+        var depth=parseFloat(el.getAttribute('data-depth')||'8');
+        el.style.transform='translateY('+(d*depth*-1)+'px)';
+      });
+    }
+    var ticking=false;
+    window.addEventListener('scroll',function(){
+      if(!ticking){requestAnimationFrame(function(){para();ticking=false});ticking=true;}
+    },{passive:true});
+  }
+
+  var form=document.getElementById('store-form');
+  var err=document.getElementById('form-error');
+  function show(msg){err.textContent=msg;err.classList.add('on')}
+  function hide(){err.textContent='';err.classList.remove('on')}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    hide();
+    var nome=(form.nome.value||'').trim();
+    var email=(form.email.value||'').trim();
+    var tel=(form.telefono.value||'').trim();
+    var store=(form.store.value||'').trim();
+    var msg=(form.messaggio.value||'').trim();
+    if(!nome){show('Scrivete il vostro nome.');form.nome.focus();return}
+    if(!email && !tel){show('Lasciate un\'email o un telefono, anche solo uno dei due.');form.email.focus();return}
+    if(!store){show('Inserite il link del vostro store.');form.store.focus();return}
+    if(store && !/^https?:\/\//i.test(store)) store='https://'+store;
+    var lines=['Ciao, sono '+nome+'.','Vorrei i 3 interventi gratis sul mio store.'];
+    if(email) lines.push('Email: '+email);
+    if(tel) lines.push('Telefono: '+tel);
+    lines.push('Store: '+store);
+    if(msg) lines.push(msg);
+    var url='https://wa.me/393514512070?text='+encodeURIComponent(lines.join('\n'));
+    window.open(url,'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
